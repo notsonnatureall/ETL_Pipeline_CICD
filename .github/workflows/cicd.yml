@@ -26,12 +26,11 @@ jobs:
         run: |
           PYTHONPATH=. pytest tests/ -v
 
-  # Tahap 2: Continuous Deployment (Simulasi)
-  deploy-mock:
+  deploy:
     needs: build-and-test 
     runs-on: ubuntu-latest
     steps:
-      - name: Simulasi Deployment
+      - name: Deployment
         run: |
           echo "✅ Semua test lolos!"
           echo "🎉 Proses CI/CD Selesai dengan sukses!"
