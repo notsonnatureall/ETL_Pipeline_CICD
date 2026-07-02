@@ -24,7 +24,7 @@ jobs:
 
       - name: Jalankan Unit Test (Pytest)
         run: |
-          pytest tests/ -v
+          PYTHONPATH=. pytest tests/ -v
 
   # Tahap 2: Continuous Deployment (Simulasi)
   deploy-mock:
